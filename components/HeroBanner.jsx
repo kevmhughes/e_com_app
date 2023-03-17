@@ -16,7 +16,6 @@ const HeroBanner = ({ heroBanner }) => (
         </h3>
         <h1>
         {heroBanner.largeText1}
-        {console.log(heroBanner)}
         </h1>
         <img src={urlFor(heroBanner.image)} alt="headphones" className='hero-banner-image' />
 
