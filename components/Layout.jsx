@@ -3,7 +3,8 @@ import Head from "next/head";
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-const Layout = ( {children} ) => {
+// children below allows us to access the props of <Component> in _app.js
+const Layout = ({ children }) => {
   return (
     <div>
       <div className='layout'>
