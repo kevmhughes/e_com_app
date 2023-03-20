@@ -12,17 +12,13 @@ const Layout = ({ children }) => {
           <title>Tech Store</title>
         </Head>
         <header>
-          <NavBar>
-
-          </NavBar>
+          <NavBar></NavBar>
         </header>
         <main className='main-container'>
           {children}
         </main>
         <footer>
-          <Footer>
-            
-          </Footer>
+          <Footer></Footer>
         </footer>
       </div>
     </div>
