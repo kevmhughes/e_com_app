@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft,AiOutlineShopping } from 'react-icons/ai';
-import { TiDeleteOutlien } from "react-icons/ti";
+import { TiDeleteOutline } from "react-icons/ti";
 import toast from "react-hot-toast";
 
 import { useStateContext } from "../context/StateContext";
@@ -51,6 +51,31 @@ const Cart = () => {
                   <div className='flex top'>
                     <h5>{item.name}</h5>
                     <h4>${item.price}</h4>
+                  </div>
+                  <div className='flex bottom'>
+                    <div>
+                    <p className='quantity-desc'>
+                        <span className='minus'
+                        onClick=""
+                        ><AiOutlineMinus/>
+                        </span>
+                        <span className='num'
+                        >
+                        0
+                        </span>
+                        <span className='plus'
+                        onClick=""
+                        ><AiOutlinePlus/>
+                        </span>
+                    </p>
+                    </div>
+                    <button
+                    type="button"
+                    className='remove-item'
+                    onClick=""
+                    >
+                      <TiDeleteOutline/>
+                    </button>
                   </div>
                 </div>
              </div>
