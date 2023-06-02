@@ -4,7 +4,7 @@ const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    console.log(req.body)
+    //console.log(req.body)
 
     try {
         const params = {
@@ -21,16 +21,31 @@ export default async function handler(req, res) {
               const img = item.image[0].asset._ref;
               const newImage = img.replace("image-", "https://cdn.sanity.io/images/e7zeczxk/production/").replace("-webp", ".webp")
 
-              console.log("IMAGE", newImage)
+              return {
+                price_data: {
+                  currency: "usd",
+                  product_data: {
+                    name: item.name,
+                    images: [newImage],
+                  },
+                  unit_amount: item.price * 100,
+                },
+                adjustable_quantity: {
+                  enabled: true,
+                  minimum: 1,
+                },
+                quantity: item.quantity,
+              }
+              //console.log("IMAGE", newImage)
             }),
-            mode: 'payment',
             success_url: `${req.headers.origin}/?success=true`,
             cancel_url: `${req.headers.origin}/?canceled=true`,
           }
 
       // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create(params);
-      res.redirect(303, session.url);
+
+      res.status(200).json(session);
     } catch (err) {
       res.status(err.statusCode || 500).json(err.message);
     }
