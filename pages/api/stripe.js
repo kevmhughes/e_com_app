@@ -16,6 +16,11 @@ export default async function handler(req, res) {
                 { shipping_rate: "shr_1NDxx9LpZald5BFx91pVoTLp" },
                 { shipping_rate: "shr_1NDxyBLpZald5BFxWeAoWUxs" }
             ],
+            custom_text: {
+              submit: {
+                message: "For testing purposes, fill the card information fields using a series of the numbers 4 and 2."
+              }
+            },
 
             line_items: req.body.map((item) => {
               const img = item.image[0].asset._ref;
