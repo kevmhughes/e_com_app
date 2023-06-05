@@ -19,19 +19,19 @@ JSM ProSounds is a fully responsive and modern full stack app with all the funct
 ## Mobile:
 
 <kbd>
-<img src="readme-images/ecomapp_mobile.png" width="200"/>
+<img src="readme-images/ecomapp_mobile.png" width="250"/>
 </kbd>
 
 <kbd>
-<img src="readme-images/ecomapp_mobile2.png" width="200"/>
+<img src="readme-images/ecomapp_mobile2.png" width="250"/>
 </kbd>
 
 <kbd>
-<img src="readme-images/ecomapp_mobile3.png" width="200"/>
+<img src="readme-images/ecomapp_mobile3.png" width="250"/>
 </kbd>
 
 <kbd>
-<img src="readme-images/ecomapp_mobile4.png" width="200"/>
+<img src="readme-images/ecomapp_mobile4.png" width="250"/>
 </kbd>
 
 # Tools Used
