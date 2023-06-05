@@ -1,6 +1,6 @@
 # JSM ProSounds 
 
-#### JSM ProSounds is a fully responsive, modern full stack e-commerce application built with React, Next.JS, Stripe & Sanity
+#### JSM ProSounds is a fully responsive and modern full stack e-commerce application built with React, Next.JS, Stripe & Sanity
 
 Use the app [here](https://e-com-app-sanity.vercel.app)
 
