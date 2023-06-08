@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <div>
       <div className='layout'>
         <Head>
-          <title>Tech Store</title>
+          <title>JSM ProSounds</title>
         </Head>
         <header>
           <NavBar></NavBar>
