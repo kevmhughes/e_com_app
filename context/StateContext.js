@@ -37,6 +37,15 @@ export const StateContext = ({ children }) => {
         toast.success(`${qty} ${product.name} added to the cart`);
     }
 
+      // setting local storage
+  useEffect(() => {
+    let string = JSON.stringify(cartItems);
+    localStorage.setItem("cartItems", string);
+    localStorage.setItem("total", totalQuantities);
+    localStorage.setItem("price", totalPrice);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cartItems]);
+
     const onRemove = (product) => {
         foundProduct = cartItems.find((item) => item._id === product._id)
         const newCartItems = cartItems.filter((item) => item._id !== product._id);
