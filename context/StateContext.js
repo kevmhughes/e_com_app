@@ -61,30 +61,23 @@ export const StateContext = ({ children }) => {
     const newCartItems = cartItems.filter((item) => item._id !== id);
 
     if (value === "inc") {
-      let finalCartItems = [
-        ...newCartItems,
+      setCartItems([
+        ...newCartItems.slice(0, index),
         { ...foundProduct, quantity: foundProduct.quantity + 1 },
-      ];
-      let length = finalCartItems.length;
-      [finalCartItems[index], finalCartItems[length - 1]] = [
-        finalCartItems[length - 1],
-        finalCartItems[index],
-      ];
-      setCartItems(finalCartItems);
+        ...newCartItems.slice(index),
+      ]);
       setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
+         //
+      //
+      //
     } else if (value === "dec") {
       if (foundProduct.quantity > 1) {
-        let finalCartItems = [
-          ...newCartItems,
+        setCartItems([
+          ...newCartItems.slice(0, index),
           { ...foundProduct, quantity: foundProduct.quantity - 1 },
-        ];
-        let length = finalCartItems.length;
-        [finalCartItems[index], finalCartItems[length - 1]] = [
-          finalCartItems[length - 1],
-          finalCartItems[index],
-        ];
-        setCartItems(finalCartItems);
+          ...newCartItems.slice(index),
+        ]);
         setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
       }
