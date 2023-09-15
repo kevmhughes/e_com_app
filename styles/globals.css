@@ -128,11 +128,6 @@ span.text-red {
   color: black;
 }
 
-.correct-mobile-view {
-  width: 93%;
-  margin: auto;
-}
-
 .hero-banner-container {
   padding: 100px 40px;
   background-color: #dcdcdc;
@@ -613,6 +608,10 @@ span.text-red {
 }
 
 @media screen and (max-width: 800px) {
+  .correct-mobile-view {
+    width: 93%;
+    margin: auto;
+  }
   .hero-banner-container {
     height: 560px;
   }
