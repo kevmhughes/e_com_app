@@ -68,5 +68,3 @@ JSM ProSounds is a fully responsive and modern full stack app with all the funct
 * modify the cart
 * choose appropriate shipping costs
 * pay securely 
-
-</body>
